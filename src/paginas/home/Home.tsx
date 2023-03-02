@@ -10,10 +10,10 @@ function Home() {
       <Grid className='fundo' container direction="row" justifyContent="center" alignItems='center' >
         <Grid alignItems='center' item xs={6}>
           <Box paddingX={20} paddingBottom="20px">
-           
-            <Typography  variant="h3" gutterBottom color='textPrimary' component="h3" align='center' style={{ color: "white" ,fontWeight: "bold" }}>Bem vindo (a)!</Typography>
-            <Typography  variant="h5" gutterBottom color='textPrimary' component="h5" align='center' style={{  color: "white",fontWeight: "bold" }}>Escreva aqui sua opiniões !</Typography>
-            
+            <div className='nomes'>
+              <Typography variant="h3" gutterBottom color='textPrimary' component="h3" align='center' style={{ fontWeight: "bold" }}>Bem vindo (a)!</Typography>
+              <Typography variant="h5" gutterBottom color='textPrimary' component="h5" align='center' style={{ fontWeight: "bold" }}>Escreva aqui sua opiniões !</Typography>
+            </div>
           </Box>
           <Box display="flex" justifyContent="center">
             <Box marginRight={1}>
