@@ -4,7 +4,8 @@ import { Button } from "@material-ui/core"
 import { Box, Modal } from '@mui/material';
 import CloseIcon from '@material-ui/icons/Close';
 import './Modalproduto.css';
-import CadastroPost from '../cadastroPost/CadastroPost';
+import CadastroProd from '../cadastroProd/CadastroProd';
+
 
 
 function getModalStyle() {
@@ -51,7 +52,7 @@ function Modalproduto() {
 
             </Box>
 
-            <CadastroPost />
+            <CadastroProd />
 
         </div>
     );

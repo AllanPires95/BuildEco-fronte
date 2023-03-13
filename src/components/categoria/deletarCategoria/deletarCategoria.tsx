@@ -1,21 +1,21 @@
 import React, { useEffect, useState } from 'react'
-import { Typography, Button, Card, CardActions, CardContent } from "@material-ui/core";
+import { Card, CardActions, CardContent, Button, Typography } from '@material-ui/core';
 import { Box } from '@mui/material';
-import './DeletarProduto.css';
+import './deletarCategoria.css';
 import { useNavigate, useParams } from 'react-router-dom';
-import produto from '../../../models/Produto';
 import { buscaId, deleteId } from '../../../services/Service';
 import { useSelector } from 'react-redux';
 import { TokenState } from '../../../store/tokens/TokensReducer';
 import { toast } from 'react-toastify';
+import categoria from '../../../models/Categoria';
 
-function Deletarproduto() {
+function DeletarCategoria() {
     let navigate = useNavigate();
     const { id } = useParams<{ id: string }>();
     const token = useSelector<TokenState, TokenState["tokens"]>(
         (state) => state.tokens
     );
-    const [post, setPosts] = useState<produto>()
+    const [categoria, setcategoria] = useState<categoria>()
 
     useEffect(() => {
         if (token == "") {
@@ -41,7 +41,7 @@ function Deletarproduto() {
     }, [id])
 
     async function findById(id: string) {
-        buscaId(`/produto/${id}`, setPosts, {
+        buscaId(`/categoria/${id}`, setcategoria, {
             headers: {
                 'Authorization': token
             }
@@ -49,13 +49,13 @@ function Deletarproduto() {
     }
 
     function sim() {
-        navigate('/posts')
-        deleteId(`/produto/${id}`, {
+        navigate('/Categoria')
+        deleteId(`/categoria/${id}`, {
             headers: {
                 'Authorization': token
             }
         });
-        toast.success('produto deletada com sucesso', {
+        toast.success('categoria deletada com sucesso', {
             position: "top-right",
             autoClose: 2000,
             hideProgressBar: false,
@@ -68,22 +68,22 @@ function Deletarproduto() {
     }
 
     function nao() {
-        navigate('/posts')
+        navigate('/Categoria')
     }
+
     return (
         <>
             <Box m={2}>
-                <Card variant="outlined" >
+                <Card variant="outlined">
                     <CardContent>
                         <Box justifyContent="center">
                             <Typography color="textSecondary" gutterBottom>
-                                Deseja deletar a produto:
+                                Deseja deletar a categoria:
                             </Typography>
-                            <Typography color="textSecondary" >
-                                {post?.nome}
+                            <Typography color="textSecondary">
+                                {categoria?.descricao}
                             </Typography>
                         </Box>
-
                     </CardContent>
                     <CardActions>
                         <Box display="flex" justifyContent="start" ml={1.0} mb={2} >
@@ -92,7 +92,7 @@ function Deletarproduto() {
                                     Sim
                                 </Button>
                             </Box>
-                            <Box>
+                            <Box mx={2}>
                                 <Button onClick={nao} variant="contained" size='large' color="secondary">
                                     Não
                                 </Button>
@@ -104,4 +104,4 @@ function Deletarproduto() {
         </>
     );
 }
-export default Deletarproduto;
+export default DeletarCategoria;

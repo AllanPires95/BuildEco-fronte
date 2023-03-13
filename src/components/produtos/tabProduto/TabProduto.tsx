@@ -3,7 +3,8 @@ import { AppBar, Tab, Tabs, Typography} from '@material-ui/core';
 import {Box} from '@mui/material';
 import { TabContext, TabPanel } from '@material-ui/lab';
 import './Tabproduto.css';
-import Listaproduto from '../listaproduto/Listaproduto';
+import ListaProduto from '../listaProduto/ListaProduto';
+
 
 
 function Tabproduto() {
@@ -16,13 +17,13 @@ return (
     <TabContext value={value}>
         <AppBar position="static">
         <Tabs centered indicatorColor="secondary" onChange={handleChange}>
-            <Tab label="Todas as postagens" value="1"/>
+            <Tab label="Todas as produto" value="1"/>
             <Tab label="Sobre-nós" value="2" />
         </Tabs>
         </AppBar>
         <TabPanel value="1" >
         <Box display="flex" flexWrap="wrap" justifyContent="center">
-            <Listaproduto />
+            <ListaProduto />
         </Box>
         </TabPanel>
         <TabPanel value="2">
