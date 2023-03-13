@@ -23,7 +23,7 @@ function Navbar() {
                         <Typography variant="h6" component="div" sx={{ flexGrow: 1 }}>
                         <Link to="login" className='text-decorator-none'>
                         <Button style={{ color: "white" }}>Inicio</Button>
-                            </Link>
+                        </Link>
                         </Typography>
                         <Typography variant="h6" component="div" sx={{ flexGrow: 1 }}>
                             <Button color="inherit">Categoria</Button>
