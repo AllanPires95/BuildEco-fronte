@@ -1,0 +1,27 @@
+.fundo{
+  background-color: rgb(77, 72, 76);
+  margin-bottom: 300px;
+ 
+    
+    
+}
+
+
+
+.img{
+
+
+border-radius: 20px;
+
+
+}
+
+.Gridimg{
+  padding-bottom: 40px;
+  padding-top: 40px;
+  padding-left: 140px;
+}
+
+.nomes{
+  color: blueviolet !important;
+}
