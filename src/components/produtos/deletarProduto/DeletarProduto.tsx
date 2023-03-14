@@ -3,11 +3,11 @@ import { Typography, Button, Card, CardActions, CardContent } from "@material-ui
 import { Box } from '@mui/material';
 import './DeletarProduto.css';
 import { useNavigate, useParams } from 'react-router-dom';
-import produto from '../../../models/Produto';
 import { buscaId, deleteId } from '../../../services/Service';
 import { useSelector } from 'react-redux';
-import { TokenState } from '../../../store/tokens/TokensReducer';
 import { toast } from 'react-toastify';
+import Produto from '../../../models/Produto';
+import { TokenState } from '../../../store/tokens/TokensReducer';
 
 function Deletarproduto() {
     let navigate = useNavigate();
@@ -15,7 +15,7 @@ function Deletarproduto() {
     const token = useSelector<TokenState, TokenState["tokens"]>(
         (state) => state.tokens
     );
-    const [post, setPosts] = useState<produto>()
+    const [post, setPosts] = useState<Produto>()
 
     useEffect(() => {
         if (token == "") {

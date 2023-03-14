@@ -1,13 +1,14 @@
-import React, { ChangeEvent, useEffect, useState } from 'react'
+import React, { ChangeEvent, useEffect, useState} from 'react'
 import { Container, Typography, TextField, Button, Select, InputLabel, MenuItem, FormControl, FormHelperText } from "@material-ui/core"
 import './CadastroProd.css';
 import { useNavigate, useParams } from 'react-router-dom'
 import { busca, buscaId, post, put } from '../../../services/Service';
 import { useSelector } from 'react-redux';
-import { TokenState } from '../../../store/tokens/TokensReducer';
 import { toast } from 'react-toastify';
-import Produto from '../../../models/Produto';
 import Categoria from '../../../models/Categoria';
+import { TokenState } from '../../../store/tokens/TokensReducer';
+import Produto from '../../../models/Produto';
+
 
 function CadastroProd() {
     let navigate = useNavigate();
@@ -99,14 +100,32 @@ function CadastroProd() {
                     'Authorization': token
                 }
             })
-            alert('produto atualizada com sucesso');
+            toast.success('Produto atualizado com sucesso!', {
+                position: "top-right",
+                autoClose: 5000,
+                hideProgressBar: false,
+                closeOnClick: true,
+                pauseOnHover: true,
+                draggable: true,
+                progress: undefined,
+                theme: "light",
+                });
         } else {
             post(`/produto`, produto, setProduto, {
                 headers: {
                     'Authorization': token
                 }
             })
-            alert('produto cadastrada com sucesso');
+            toast.success('Produto cadastrado com sucesso!', {
+                position: "top-right",
+                autoClose: 5000,
+                hideProgressBar: false,
+                closeOnClick: true,
+                pauseOnHover: true,
+                draggable: true,
+                progress: undefined,
+                theme: "light",
+                });
         }
         back()
 

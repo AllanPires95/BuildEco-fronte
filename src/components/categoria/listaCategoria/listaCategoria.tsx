@@ -3,13 +3,13 @@ import { Link } from 'react-router-dom'
 import { Card, CardActions, CardContent, Button, Typography } from '@material-ui/core';
 import { Box } from '@mui/material';
 import './listaCategoria.css';
-import useLocalStorage from 'react-use-localstorage';
 import { useNavigate } from 'react-router-dom';
 import { busca } from '../../../services/Service';
 import { toast } from 'react-toastify';
 import { useSelector } from 'react-redux';
-import { TokenState } from '../../../store/tokens/TokensReducer';
 import Categoria from '../../../models/Categoria';
+import { TokenState } from '../../../store/tokens/TokensReducer';
+
 
 function ListaCategoria() {
     const [categoria, setCategoria] = useState<Categoria[]>([])

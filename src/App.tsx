@@ -15,7 +15,7 @@ import CadastroProd from './components/produtos/cadastroProd/CadastroProd';
 import ListaProduto from './components/produtos/listaProduto/ListaProduto';
 import ListaCategoria from './components/categoria/listaCategoria/listaCategoria';
 import store from './store/Store';
-
+import 'react-toastify/dist/ReactToastify.css';
 
 function App() {
   return (

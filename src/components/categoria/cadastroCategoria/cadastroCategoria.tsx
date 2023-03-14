@@ -5,8 +5,9 @@ import './cadastroCategoria.css';
 import { buscaId, post, put } from '../../../services/Service';
 import { useSelector } from 'react-redux';
 import { toast } from 'react-toastify';
-import Categoria from '../../../models/Categoria';
 import { TokenState } from '../../../store/tokens/TokensReducer';
+import Categoria from '../../../models/Categoria';
+
 
 
 function CadastroCategoria() {

@@ -5,8 +5,9 @@ import {Box} from '@mui/material';
 import { useNavigate } from 'react-router-dom'
 import { busca } from '../../../services/Service';
 import { useSelector } from 'react-redux';
-import { TokenState } from '../../../store/tokens/TokensReducer';
 import Produto from '../../../models/Produto';
+import { TokenState } from '../../../store/tokens/TokensReducer';
+import { toast } from 'react-toastify';
 
 function ListaProduto() {
 const [posts, setPosts] = useState<Produto[]>([])
@@ -17,7 +18,16 @@ let navigate = useNavigate();
 
 useEffect(() => {
     if (token == "") {
-    alert("Você precisa estar logado")
+        toast.warn('Você precisa estar logado!', {
+            position: "top-right",
+            autoClose: 5000,
+            hideProgressBar: false,
+            closeOnClick: true,
+            pauseOnHover: true,
+            draggable: true,
+            progress: undefined,
+            theme: "light",
+            });
     navigate("/login")
 
     }

@@ -5,9 +5,9 @@ import './deletarCategoria.css';
 import { useNavigate, useParams } from 'react-router-dom';
 import { buscaId, deleteId } from '../../../services/Service';
 import { useSelector } from 'react-redux';
-import { TokenState } from '../../../store/tokens/TokensReducer';
 import { toast } from 'react-toastify';
-import categoria from '../../../models/Categoria';
+import { TokenState } from '../../../store/tokens/TokensReducer';
+import Categoria from '../../../models/Categoria';
 
 function DeletarCategoria() {
     let navigate = useNavigate();
@@ -15,7 +15,7 @@ function DeletarCategoria() {
     const token = useSelector<TokenState, TokenState["tokens"]>(
         (state) => state.tokens
     );
-    const [categoria, setcategoria] = useState<categoria>()
+    const [categoria, setcategoria] = useState<Categoria>()
 
     useEffect(() => {
         if (token == "") {
