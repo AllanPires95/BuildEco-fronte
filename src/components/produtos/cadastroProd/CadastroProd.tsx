@@ -1,4 +1,4 @@
-import React, { ChangeEvent, useEffect, useState} from 'react'
+import React, { ChangeEvent, useEffect, useState } from 'react'
 import { Container, Typography, TextField, Button, Select, InputLabel, MenuItem, FormControl, FormHelperText } from "@material-ui/core"
 import './CadastroProd.css';
 import { useNavigate, useParams } from 'react-router-dom'
@@ -38,15 +38,15 @@ function CadastroProd() {
         {
             id: 0,
             descricao: '',
-            nome:''
+            nome: ''
         })
     const [produto, setProduto] = useState<Produto>({
         id: 0,
         nome: '',
         quantidade: 0,
         preco: 0,
-        marca:'',
-        peso:0,
+        marca: '',
+        peso: 0,
         data: '',
         categoria: null
     })
@@ -74,7 +74,7 @@ function CadastroProd() {
     }
 
     async function findByIdproduto(id: string) {
-        await buscaId(`produto/${id}`, setProduto, {
+        await buscaId(`/produto/${id}`, setProduto, {
             headers: {
                 'Authorization': token
             }
@@ -95,7 +95,7 @@ function CadastroProd() {
         e.preventDefault()
 
         if (id !== undefined) {
-            put(`/produto`, produto, setProduto, {
+            await put(`/produto`, produto, setProduto, {
                 headers: {
                     'Authorization': token
                 }
@@ -109,49 +109,63 @@ function CadastroProd() {
                 draggable: true,
                 progress: undefined,
                 theme: "light",
-                });
+            });
         } else {
-            post(`/produto`, produto, setProduto, {
-                headers: {
-                    'Authorization': token
-                }
-            })
-            toast.success('Produto cadastrado com sucesso!', {
-                position: "top-right",
-                autoClose: 5000,
-                hideProgressBar: false,
-                closeOnClick: true,
-                pauseOnHover: true,
-                draggable: true,
-                progress: undefined,
-                theme: "light",
+            try {
+                await post(`/produto`, produto, setProduto, {
+                    headers: {
+                        'Authorization': token,
+
+                    },
                 });
+                toast.success('Produto cadastrado com sucesso!', {
+                    position: "top-right",
+                    autoClose: 5000,
+                    hideProgressBar: false,
+                    closeOnClick: true,
+                    pauseOnHover: true,
+                    draggable: true,
+                    progress: undefined,
+                    theme: "light",
+                });
+            } catch (error) {
+                toast.error('Erro ao cadastrar produto', {
+                    position: "top-center",
+                    autoClose: 2000,
+                    hideProgressBar: false,
+                    closeOnClick: true,
+                    pauseOnHover: true,
+                    draggable: true,
+                    progress: undefined,
+                    theme: "dark",
+                });
+            }
         }
-        back()
+        back();
 
     }
 
     function back() {
-        navigate('/posts')
+        navigate('/produto')
     }
 
     return (
-        <Container maxWidth="sm" className="topo">
+        <Container maxWidth="sm" className="topo">  
             <form onSubmit={onSubmit}>
                 <Typography variant="h3" color="textSecondary" component="h1" align="center" >Formulário de cadastro produto</Typography>
-                <TextField value={produto.nome} onChange={(e: ChangeEvent<HTMLInputElement>) => updatedproduto(e)} id="titulo" label="titulo" variant="outlined" name="titulo" margin="normal" fullWidth />
-                <TextField value={produto.quantidade} onChange={(e: ChangeEvent<HTMLInputElement>) => updatedproduto(e)} id="texto" label="texto" name="texto" variant="outlined" margin="normal" fullWidth />
-                <TextField value={produto.marca} onChange={(e: ChangeEvent<HTMLInputElement>) => updatedproduto(e)} id="texto" label="texto" name="texto" variant="outlined" margin="normal" fullWidth />
-                <TextField value={produto.peso} onChange={(e: ChangeEvent<HTMLInputElement>) => updatedproduto(e)} id="texto" label="texto" name="texto" variant="outlined" margin="normal" fullWidth />
-                <TextField value={produto.preco} onChange={(e: ChangeEvent<HTMLInputElement>) => updatedproduto(e)} id="texto" label="texto" name="texto" variant="outlined" margin="normal" fullWidth />
+                <TextField value={produto.nome} onChange={(e: ChangeEvent<HTMLInputElement>) => updatedproduto(e)} id="nome" label="NOME" variant="outlined" name="nome" margin="normal" fullWidth />
+                <TextField value={produto.quantidade} onChange={(e: ChangeEvent<HTMLInputElement>) => updatedproduto(e)} id="quantidade" label="QTD" name="quantidade" variant="outlined" margin="normal" fullWidth />
+                <TextField value={produto.marca} onChange={(e: ChangeEvent<HTMLInputElement>) => updatedproduto(e)} id="url" label="URL" name="url" variant="outlined" margin="normal" fullWidth />
+                <TextField value={produto.peso} onChange={(e: ChangeEvent<HTMLInputElement>) => updatedproduto(e)} id="peso" label="KG" name="peso" variant="outlined" margin="normal" fullWidth />
+                <TextField value={produto.preco} onChange={(e: ChangeEvent<HTMLInputElement>) => updatedproduto(e)} id="preco" label="preço" name="preco" variant="outlined" margin="normal" fullWidth />
                 <FormControl >
                     <InputLabel id="demo-simple-select-helper-label">categoria </InputLabel>
                     <Select
                         labelId="demo-simple-select-helper-label"
                         id="demo-simple-select-helper"
-                        onChange={(e) => buscaId(`/Categoria/${e.target.value}`, setCategoria, {
+                        onChange={(e) => buscaId(`/categoria/${e.target.value}`, setCategoria, {
                             headers: {
-                                'Authorization': token
+                                'Authorization': token,
                             }
                         })}>
                         {
@@ -160,13 +174,13 @@ function CadastroProd() {
                             ))
                         }
                     </Select>
-                    <FormHelperText>Escolha um categoria para a produto</FormHelperText>
+                    <FormHelperText>Escolha uma categoria para o produto </FormHelperText>
                     <Button type="submit" variant="contained" color="primary">
                         Finalizar
                     </Button>
                 </FormControl>
             </form>
         </Container>
-    )
+    );
 }
 export default CadastroProd;

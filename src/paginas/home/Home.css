@@ -1,18 +1,17 @@
 .fundo{
-  background-color: rgb(77, 72, 76);
-  margin-bottom: 300px;
- 
-    
-    
+  background-color: #86af37;
+  margin-bottom: 300px; 
+
 }
 
+.t1{
+  text-align: center;
+  font-size: larger;
+}
 
-
-.img{
-
-
-border-radius: 20px;
-
+.txtcolor{
+  margin-top: "700px";
+  margin-bottom:"300px";
 
 }
 
@@ -22,6 +21,7 @@ border-radius: 20px;
   padding-left: 140px;
 }
 
-.nomes{
-  color: blueviolet !important;
+.txt{
+  color: rgb(255, 255, 255) !important;
+  size: 15;
 }

@@ -1,10 +1,9 @@
 import { Box, AppBar, Toolbar, IconButton, Button, Typography } from "@mui/material";
-import MenuIcon from '@mui/icons-material/Menu';
 import React from "react";
 import { Link, useNavigate } from 'react-router-dom';
 import "./Navbar.css";
 import { useDispatch, useSelector } from "react-redux";
-import {toast} from 'react-toastify';
+import { toast } from 'react-toastify';
 import { TokenState } from "../../../store/tokens/TokensReducer";
 import { addToken } from "../../../store/tokens/Actions";
 
@@ -31,57 +30,48 @@ function Navbar() {
     }
     var navbarComponent;
 
-    if(token !=""){
+    if (token != "") {
         navbarComponent = <Box sx={{ flexGrow: 1 }} >
-        <AppBar position="static" >
-            <Toolbar >
-                <IconButton
-                    size="large"
-                    edge="start"
-                    color="inherit"
-                    aria-label="menu"
-                    sx={{ mr: 2 }}>
-                    <MenuIcon />
-                </IconButton>
-                <Typography variant="h6" component="div" sx={{ flexGrow: 1 }}>
-                    <Link to="/home" className='text-decorator-none'>
-                        <Button color="inherit">inicio</Button>
+            <AppBar position="static" className="img" style={{ backgroundColor: "#0f2a00", height: "90px" }}>
+                <Toolbar >
+                    <Link to="/home">
+                        <img src="https://i.imgur.com/HlD7DSn.png" width="80px" className="p-30"></img>
                     </Link>
-                </Typography>
-                <Typography variant="h6" component="div" sx={{ flexGrow: 1 }}>
-                    <Link to="/temas" className="text-decorator-none">
-                        <Button color="inherit">temas</Button>
+                    <Typography variant="h6" component="div" sx={{ flexGrow: 1 }}>
+                        <Link to="/categoria" className="text-decorator-none">
+                            <Button variant="outlined">Categoria</Button>
+                        </Link>
+                    </Typography>
+                    <Typography variant="h6" component="div" sx={{ flexGrow: 1 }}>
+                        <Link to="/formulariocategoria" className="text-decorator-none">
+                            <Button variant="outlined">Cadastro Categoria</Button>
+                        </Link>
+                    </Typography>
+                    <Typography variant="h6" component="div" sx={{ flexGrow: 1 }}>
+                        <Link to="/produto" className='text-decorator-none'>
+                            <Button variant="outlined">Produtos</Button>
+                        </Link>
+                    </Typography>
+                    <Typography variant="h6" component="div" sx={{ flexGrow: 1 }}>
+                        <Link to="/formularioproduto" className='text-decorator-none'>
+                            <Button variant="outlined">Cadastro Produtos</Button>
+                        </Link>
+                    </Typography>
+                    <Link to="/Login" className="text-decorator-none">
+                        <Box mx={1} className="cursor" onClick={goLogout}>
+                            <Typography variant="h6" color="inherit">
+                                <Button variant="outlined">Logout</Button>
+                            </Typography>
+
+                        </Box>
                     </Link>
-                </Typography>
-                <Typography variant="h6" component="div" sx={{ flexGrow: 1 }}>
-                    <Link to="/posts" className='text-decorator-none'>
-                        <Button color="inherit">postagem</Button>
-                    </Link>
-                </Typography>
-                <Typography variant="h6" component="div" sx={{ flexGrow: 1 }}>
-                    <Link to="/formularioCategoria" className='text-decorator-none'>
-                        <Button color="inherit">cadastro Tema</Button>
-                    </Link>
-                </Typography>
-                <Typography variant="h6" component="div" sx={{ flexGrow: 1 }}>
-                    <Link to='/' className='text-decorator-none'>
-                        <Button color="inherit">Login</Button>
-                    </Link>
-                </Typography>
-                <Link to="/Login" className="text-decorator-none">
-                    <Box mx={1} className="cursor" onClick={goLogout}>
-                        <Typography variant="h6" color="inherit">
-                            <Button color="inherit">Logout</Button>
-                        </Typography>
-                    </Box>
-                </Link>
-            </Toolbar>
-        </AppBar>
-    </Box>
+                </Toolbar>
+            </AppBar>
+        </Box>
     }
     return (
         <>
-        {navbarComponent}
+            {navbarComponent}
         </>
     );
 }
