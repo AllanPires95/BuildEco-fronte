@@ -3,7 +3,7 @@ import InstagramIcon from '@material-ui/icons/Instagram';
 import FacebookIcon from '@material-ui/icons/Facebook';
 import LinkedInIcon from '@material-ui/icons/LinkedIn';
 import { Typography, Grid } from '@material-ui/core';
-import { Box } from '@mui/material';
+import { IconButton } from '@mui/material';
 import './Footer.css'
 import { useDispatch, useSelector } from 'react-redux';
 import { useNavigate } from 'react-router-dom';
@@ -13,7 +13,6 @@ import { toast } from 'react-toastify';
 
 
 function Footer() {
-
     const token = useSelector<TokenState, TokenState["tokens"]>(
         (state) => state.tokens
     );
@@ -31,40 +30,35 @@ function Footer() {
             draggable: true,
             progress: undefined,
             theme: "light",
-            });
+        });
         navigate("/login");
     }
 
     var footercomponent
     if (token != "") {
-        footercomponent = <Grid container direction="row" justifyContent="center" alignItems="center">
-            <Grid alignItems="center" item xs={12}>
-                <Box className='box1'>
-                    <Box paddingTop={1} display="flex" alignItems="center" justifyContent="center">
-                        <Typography variant="h5" align="center" gutterBottom className='texto'>Siga-nos nas redes sociais </Typography>
-                    </Box>
-                    <Box display="flex" alignItems="center" justifyContent="center">
-                        <a href="https://www.facebook.com/generationbrasil" target="_blank">
-                            <FacebookIcon className='redes' />
-                        </a>
-                        <a href="https://www.instagram.com/generationbrasil/" target="_blank">
-                            <InstagramIcon className='redes' />
-                        </a>
-                        <a href="https://www.instagram.com/generationbrasil/" target="_blank">
-                            <LinkedInIcon className='redes' />
-                        </a>
-                    </Box>
-                </Box>
-                <Box className='box2'>
-                    <Box paddingTop={1}>
-                        <Typography variant="subtitle2" align="center" gutterBottom className='texto' >© 2020 Copyright:</Typography>
-                    </Box>
-                    <Box>
-                        <a target="_blank" href="Build Eco Brasil">
-                            <Typography variant="subtitle2" gutterBottom className='texto' align="center"></Typography>
-                        </a>
-                    </Box>
-                </Box>
+        footercomponent = <Grid container spacing={4} justifyContent="center" alignItems="flex-start">
+            <Grid item md={3}>
+                <img className="img" src="https://images-ext-2.discordapp.net/external/8KZpnIEv3ngXOnG9soQQOmaPK6R7-txtzeBT0jMsDjk/https/i.imgur.com/qcgk1tC.png?width=425&height=427" alt="Logo Blog" />
+            </Grid>
+            <Grid item md={6}>
+                <Typography variant="h5" align="center" gutterBottom>Sobre nós</Typography>
+                <Typography variant="body1" align="justify">Lorem ipsum dolor sit, amet consectetur adipisicing elit. Reprehenderit ratione error quos odit, quibusdam amet quia pariatur numquam ipsum eius.
+                    Repudiandae accusantium molestiae voluptate nostrum non, harum beatae dolorum officiis! Lorem ipsum dolor, sit amet consectetur adipisicing elit.
+                </Typography>
+            </Grid>
+            <Grid item container md={3} direction="column">
+                <Typography variant="h5" align="center" gutterBottom className='texto'>Siga-nos</Typography>
+                <Grid item justifyContent="center">
+                    <IconButton href="https://www.facebook.com/generationbrasil/" target="_blank">
+                        <FacebookIcon />
+                    </IconButton>
+                    <IconButton href="https://www.instagram.com/generationbrasil/" target="_blank">
+                        <InstagramIcon />
+                    </IconButton>
+                    <IconButton href="https://www.instagram.com/generationbrasil/" target="_blank">
+                        <LinkedInIcon />
+                    </IconButton>
+                </Grid>
             </Grid>
         </Grid>
     }
