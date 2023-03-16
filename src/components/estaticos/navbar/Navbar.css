@@ -1,10 +1,14 @@
 .text-decorator-none{
     text-decoration: none;
 }
-.text-decorator-none1{
-    text-decoration: none;
+
+.espaco{
+    padding-left: 35px ;
 }
-.img {
-    background-image: "https://i.imgur.com/pXysH1e.jpg" !important;
-   
+
+.cbt{
+    color:aliceblue !important;
+}
+.vai{
+    opacity: 0.9;
 }

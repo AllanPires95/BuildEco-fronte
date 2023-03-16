@@ -155,7 +155,7 @@ function CadastroProd() {
                 <Typography variant="h3" color="textSecondary" component="h1" align="center" >Formulário de cadastro produto</Typography>
                 <TextField value={produto.nome} onChange={(e: ChangeEvent<HTMLInputElement>) => updatedproduto(e)} id="nome" label="NOME" variant="outlined" name="nome" margin="normal" fullWidth />
                 <TextField value={produto.quantidade} onChange={(e: ChangeEvent<HTMLInputElement>) => updatedproduto(e)} id="quantidade" label="QTD" name="quantidade" variant="outlined" margin="normal" fullWidth />
-                <TextField value={produto.marca} onChange={(e: ChangeEvent<HTMLInputElement>) => updatedproduto(e)} id="url" label="URL" name="url" variant="outlined" margin="normal" fullWidth />
+                <TextField value={produto.marca} onChange={(e: ChangeEvent<HTMLInputElement>) => updatedproduto(e)} id="marca" label="marca" name="marca" variant="outlined" margin="normal" fullWidth />
                 <TextField value={produto.peso} onChange={(e: ChangeEvent<HTMLInputElement>) => updatedproduto(e)} id="peso" label="KG" name="peso" variant="outlined" margin="normal" fullWidth />
                 <TextField value={produto.preco} onChange={(e: ChangeEvent<HTMLInputElement>) => updatedproduto(e)} id="preco" label="preço" name="preco" variant="outlined" margin="normal" fullWidth />
                 <FormControl >

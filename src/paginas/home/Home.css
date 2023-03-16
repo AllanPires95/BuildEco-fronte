@@ -1,12 +1,12 @@
 .fundo{
   background-color: #86af37;
-  margin-bottom: 300px; 
-
+  margin-bottom: 300px;
 }
 
 .t1{
-  text-align: center;
-  font-size: larger;
+  text-align: center !important;
+  color: #0f2a00;
+
 }
 
 .txtcolor{
@@ -14,14 +14,19 @@
   margin-bottom:"300px";
 
 }
+.txt2{
+  text-align: center;
+}
 
 .Gridimg{
-  padding-bottom: 40px;
-  padding-top: 40px;
-  padding-left: 140px;
+  justify-items: center !important;
 }
 
 .txt{
   color: rgb(255, 255, 255) !important;
   size: 15;
+}
+
+.imgbanner{
+  width: 100%;
 }

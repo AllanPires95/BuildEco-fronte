@@ -36,31 +36,29 @@ function Footer() {
 
     var footercomponent
     if (token != "") {
-        footercomponent = <Grid container spacing={4} justifyContent="center" alignItems="flex-start">
+        footercomponent = <Grid container spacing={3} justifyContent="center" alignItems="flex-start">
             <Grid item md={3}>
-                <img className="img" src="https://images-ext-2.discordapp.net/external/8KZpnIEv3ngXOnG9soQQOmaPK6R7-txtzeBT0jMsDjk/https/i.imgur.com/qcgk1tC.png?width=425&height=427" alt="Logo Blog" />
+                <img className="img" src="https://images-ext-2.discordapp.net/external/8KZpnIEv3ngXOnG9soQQOmaPK6R7-txtzeBT0jMsDjk/https/i.imgur.com/qcgk1tC.png?width=425&height=427" alt="Logotipo Build Eco" />
             </Grid>
             <Grid item md={6}>
                 <Typography variant="h5" align="center" gutterBottom>Sobre nós</Typography>
-                <Typography variant="body1" align="justify">Lorem ipsum dolor sit, amet consectetur adipisicing elit. Reprehenderit ratione error quos odit, quibusdam amet quia pariatur numquam ipsum eius.
-                    Repudiandae accusantium molestiae voluptate nostrum non, harum beatae dolorum officiis! Lorem ipsum dolor, sit amet consectetur adipisicing elit.
-                </Typography>
+                <Typography variant="body1" align="justify">Somos um e-commerce de produtos biodegradáveis para área de construção civil e temos como objetivo evitar e diminuir o impacto da construção civil no meio ambiente essa é uma das maiores motivações.</Typography>
             </Grid>
-            <Grid item container md={3} direction="column">
-                <Typography variant="h5" align="center" gutterBottom className='texto'>Siga-nos</Typography>
-                <Grid item justifyContent="center">
-                    <IconButton href="https://www.facebook.com/generationbrasil/" target="_blank">
+            <Grid item container md={3} className="icones">
+                <Typography variant="h5" gutterBottom className='texto'>Siga-nos</Typography>
+                <Grid>
+                    <IconButton  href="https://www.facebook.com/generationbrasil/" target="_blank">
                         <FacebookIcon />
                     </IconButton>
                     <IconButton href="https://www.instagram.com/generationbrasil/" target="_blank">
                         <InstagramIcon />
                     </IconButton>
-                    <IconButton href="https://www.instagram.com/generationbrasil/" target="_blank">
+                    <IconButton href="https://www.linkedin.com/school/generationbrasil/" target="_blank">
                         <LinkedInIcon />
                     </IconButton>
                 </Grid>
             </Grid>
-        </Grid>
+            </Grid>
     }
     return (
         <>

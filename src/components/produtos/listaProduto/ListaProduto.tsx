@@ -4,10 +4,11 @@ import {Card, CardActions, CardContent, Button, Typography } from '@material-ui/
 import {Box} from '@mui/material';
 import { useNavigate } from 'react-router-dom'
 import { busca } from '../../../services/Service';
-import { useSelector } from 'react-redux';
 import Produto from '../../../models/Produto';
 import { TokenState } from '../../../store/tokens/TokensReducer';
 import { toast } from 'react-toastify';
+import { useSelector } from 'react-redux';
+
 
 function ListaProduto() {
 const [posts, setPosts] = useState<Produto[]>([])
@@ -69,10 +70,9 @@ return (
             </CardContent>
             <CardActions>
                 <Box display="flex" justifyContent="center" mb={1.5}>
-
                 <Link to={`/formularioproduto/${post.id}`} className="text-decorator-none" >
                     <Box mx={1}>
-                    <Button variant="contained" className="marginLeft" size='small' color="primary" >
+                    <Button className="btnAtualizar" variant="contained" size='small'>
                         atualizar
                     </Button>
                     </Box>

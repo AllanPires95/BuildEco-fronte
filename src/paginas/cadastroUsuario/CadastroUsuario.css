@@ -1,0 +1,36 @@
+.campo {
+  border-color: antiquewhite;
+}
+.imagem2 {
+  background-image: url(https://digitallearning.eletsonline.com/wp-content/uploads/2018/12/eco_parailustrar_copia.jpg);
+  background-repeat: no-repeat;
+  width: 100vh;
+  min-height: 100vh;
+  background-size: cover;
+  background-position: center;
+}
+
+.textos2 {
+  font-weight: bold !important;
+}
+
+.btnCancelar {
+  margin-right: 20px !important;
+
+  background-color: #dbebe1 !important;
+  color: #13c04f !important;
+  border-color: black !important;
+}
+
+.btnCadastrar {
+  background-color: #dbebe1 !important;
+  color: #13c04f !important;
+}
+.campo .MuiOutlinedInput-notchedOutline {
+  border-width: 2px;
+  border-color: black;
+}
+.campo .MuiFormLabel-root,
+.campo .MuiFocused {
+  color: black;
+}

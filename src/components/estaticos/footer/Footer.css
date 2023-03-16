@@ -1,8 +1,10 @@
 .icones{
     padding-bottom: 150px;
+    justify-content: center !important;
+    
 }
 
-img {
+.img {
     margin: auto;
     max-width: 50%;
     max-height: 50%;

@@ -1,3 +1,15 @@
 .text-decorator-none{
     text-decoration: none;
 }
+
+.botao{
+    background-color: #005f22 !important;
+}
+.campo .MuiOutlinedInput-notchedOutline{
+    border-width: 2px;
+    border-color: black;
+}
+.campo .MuiFormLabel-root, .campo .MuiFocused{
+
+    color: black;
+}
