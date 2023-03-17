@@ -72,11 +72,11 @@ function Login() {
             
         
         <Grid container  direction='row' justifyContent='center' alignItems='center' style={{
-            backgroundImage: 'url(https://i.imgur.com/fPtswZI.jpg)',
-            backgroundRepeat: "no-repeat", width: "100%", minHeight: "115vh", backgroundSize: "cover", background: "cover", backgroundPosition: "center"
+            backgroundImage: 'url(https://i.imgur.com/lye2Z9u.jpg)',
+            backgroundRepeat: "no-repeat", width: "100%", minHeight: "100vh", backgroundSize: "cover", background: "cover", backgroundPosition: "center"
         }}>
-            <Grid alignItems='center' xs={6}>
-                <Box paddingX={20} >
+            <Grid className='glass' alignItems='center' xs={4}>
+                <Box paddingX={8} >
                     <form onSubmit={onSubmit}>
                         <Typography variant='h3' gutterBottom color='textPrimary' component="h3" align="center" className='texto1'>Entrar</Typography>
                         <TextField  className='campo' value={userLogin.usuario} onChange={(e:ChangeEvent<HTMLInputElement>) => updatedModel(e)} id='usuario' label="usuário" variant="outlined" name="usuario" margin="normal" fullWidth />

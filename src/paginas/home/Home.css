@@ -18,6 +18,7 @@
   text-align: center;
 }
 
+
 .Gridimg{
   justify-items: center !important;
 }
@@ -29,4 +30,9 @@
 
 .imgbanner{
   width: 100%;
+}
+
+.img{
+  width: 230px;
+  height: 220px;
 }

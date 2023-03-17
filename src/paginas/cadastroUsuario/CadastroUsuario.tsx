@@ -80,8 +80,8 @@ function CadastroUsuario() {
     return (
         <Grid container direction='row' justifyContent='center' alignItems='center' className='imagem2' >
 
-            <Grid item xs={6} alignItems='center'>
-                <Box paddingX={10}>
+            <Grid className='glass' item xs={6} alignItems='center' >
+                <Box  paddingX={10} >
                     <form onSubmit={onSubmit}>
                         <Typography variant='h3' gutterBottom color='textPrimary' component='h3' align='center' className='textos2'>Cadastrar</Typography>
                         <TextField className='campo' value={user.nome} onChange={(e: ChangeEvent<HTMLInputElement>) => updatedModel(e)} id='nome' label='nome' variant='outlined' name='nome' margin='normal' fullWidth />

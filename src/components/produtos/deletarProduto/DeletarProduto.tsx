@@ -55,7 +55,7 @@ function Deletarproduto() {
                 'Authorization': token
             }
         });
-        toast.success('produto deletada com sucesso', {
+        toast.success('produto deletado com sucesso', {
             position: "top-right",
             autoClose: 2000,
             hideProgressBar: false,
