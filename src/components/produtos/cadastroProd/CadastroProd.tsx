@@ -155,11 +155,11 @@ function CadastroProd() {
                 <Typography variant="h3" color="textSecondary" component="h1" align="center" >Formulário de cadastro produto</Typography>
                 <TextField value={produto.nome} onChange={(e: ChangeEvent<HTMLInputElement>) => updatedproduto(e)} id="nome" label="NOME" variant="outlined" name="nome" margin="normal" fullWidth />
                 <TextField value={produto.quantidade} onChange={(e: ChangeEvent<HTMLInputElement>) => updatedproduto(e)} id="quantidade" label="QTD" name="quantidade" variant="outlined" margin="normal" fullWidth />
-                <TextField value={produto.marca} onChange={(e: ChangeEvent<HTMLInputElement>) => updatedproduto(e)} id="marca" label="marca" name="marca" variant="outlined" margin="normal" fullWidth />
+                <TextField value={produto.marca} onChange={(e: ChangeEvent<HTMLInputElement>) => updatedproduto(e)} id="marca" label="MARCA" name="marca" variant="outlined" margin="normal" fullWidth />
                 <TextField value={produto.peso} onChange={(e: ChangeEvent<HTMLInputElement>) => updatedproduto(e)} id="peso" label="KG" name="peso" variant="outlined" margin="normal" fullWidth />
-                <TextField value={produto.preco} onChange={(e: ChangeEvent<HTMLInputElement>) => updatedproduto(e)} id="preco" label="preço" name="preco" variant="outlined" margin="normal" fullWidth />
+                <TextField value={produto.preco} onChange={(e: ChangeEvent<HTMLInputElement>) => updatedproduto(e)} id="preco" label="PREÇO" name="preco" variant="outlined" margin="normal" fullWidth />
                 <FormControl >
-                    <InputLabel id="demo-simple-select-helper-label">categoria </InputLabel>
+                    <InputLabel id="demo-simple-select-helper-label">categoria</InputLabel>
                     <Select
                         labelId="demo-simple-select-helper-label"
                         id="demo-simple-select-helper"
@@ -174,7 +174,7 @@ function CadastroProd() {
                             ))
                         }
                     </Select>
-                    <FormHelperText>Escolha uma categoria para o produto </FormHelperText>
+                    <FormHelperText>Escolha uma categoria para o produto</FormHelperText>
                     <Button type="submit" variant="contained" color="primary">
                         Finalizar
                     </Button>
