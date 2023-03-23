@@ -14,29 +14,36 @@
   margin-bottom:"300px";
 
 }
-.txt2{
-  text-align: center;
-}
-
-
-.Gridimg{
-  justify-items: center !important;
-}
-
 .txt{
+  text-align: center !important;
+  align-items: center;
+  justify-content: center;  
   color: rgb(255, 255, 255) !important;
-  size: 15;
-}
+  size: 15;  
+  margin-bottom: auto;
+} 
 
 .imgbanner{
   width: 100%;
+  justify-items: center !important;
 }
 
 .img{
-  width: 430px;
-  height: 420px;
+  width: 630px;
+  height: 330px;
 }
+
 
 /*.txt3{
   background-color: blue !important;
 }*/
+
+.cx{
+  justify-Content: "center" !important; 
+  align-Content:'center' !important;
+}
+.img2{
+  width: 550px;
+  height: 400px; 
+  
+}

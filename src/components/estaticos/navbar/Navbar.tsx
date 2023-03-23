@@ -30,7 +30,7 @@ function Navbar() {
     }
     var navbarComponent;
 
-    if (token != "") {
+    if (token != "/") {
         navbarComponent = <Box sx={{ flexGrow: 1 }} >
             <AppBar className="vai" position="static" style={{ backgroundColor: "#0f2a00", height: "60px" }}>
                 <Toolbar >
@@ -43,13 +43,13 @@ function Navbar() {
                         </Link>
                     </Typography>
                     <Typography variant="h6" component="div" sx={{ flexGrow: 1 }}>
-                        <Link to="/formulariocategoria" className="text-decorator-none">
-                            <Button className="cbt">sobre nós</Button>
+                        <Link to="/produto" className='text-decorator-none'>
+                            <Button className="cbt">Produtos</Button>
                         </Link>
                     </Typography>
                     <Typography variant="h6" component="div" sx={{ flexGrow: 1 }}>
-                        <Link to="/produto" className='text-decorator-none'>
-                            <Button className="cbt">Produtos</Button>
+                        <Link to="/formulariocategoria" className="text-decorator-none">
+                            <Button className="cbt">sobre nós</Button>
                         </Link>
                     </Typography>
                 
