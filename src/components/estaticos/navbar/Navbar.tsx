@@ -44,7 +44,7 @@ function Navbar() {
                     </Typography>
                     <Typography variant="h6" component="div" sx={{ flexGrow: 1 }}>
                         <Link to="/formulariocategoria" className="text-decorator-none">
-                            <Button className="cbt">Cadastro Categoria</Button>
+                            <Button className="cbt">sobre nós</Button>
                         </Link>
                     </Typography>
                     <Typography variant="h6" component="div" sx={{ flexGrow: 1 }}>
@@ -52,11 +52,7 @@ function Navbar() {
                             <Button className="cbt">Produtos</Button>
                         </Link>
                     </Typography>
-                    <Typography variant="h6" component="div" sx={{ flexGrow: 1 }}>
-                        <Link to="/formularioproduto" className='text-decorator-none'>
-                            <Button className="cbt" >Cadastro Produtos</Button>
-                        </Link>
-                    </Typography>
+                
                     <Link to="/Login" className="text-decorator-none">
                         <Box mx={1} className="cursor" onClick={goLogout}>
                             <Typography variant="h6" color="inherit">
