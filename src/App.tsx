@@ -16,6 +16,7 @@ import ListaProduto from './components/produtos/listaProduto/ListaProduto';
 import ListaCategoria from './components/categoria/listaCategoria/listaCategoria';
 import store from './store/Store';
 import 'react-toastify/dist/ReactToastify.css';
+import SobreNos from './paginas/sobreNos/SobreNos';
 
 function App() {
   return (
@@ -26,6 +27,10 @@ function App() {
 
         <div style={{ minHeight: '100vh' }}>
           <Routes>
+
+          <Route path="/sobrenos" element={<SobreNos/>} />
+
+        
             <Route path="/" element={<Login />} />
 
             <Route path="/login" element={<Login />} />
