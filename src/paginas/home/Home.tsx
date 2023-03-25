@@ -24,13 +24,21 @@ function Home() {
 
             <Box >
               <Carousel show={4} slide={1} className="txt2">
+                
                 <img src="https://imgur.com/hgWSsu5.jpeg" className='img' />
+                
                 <img src="https://i.imgur.com/d2KpdYI.png" className='img' />
+
                 <img src="https://i.imgur.com/sGBudNJ.png" className='img' />
+
                 <img src="https://i.imgur.com/tbPcO9P.png" className='img' />
+
                 <img src="https://imgur.com/hgWSsu5.jpeg" className='img' />
+
                 <img src="https://i.imgur.com/d2KpdYI.png" className='img' />
+
                 <img src="https://i.imgur.com/sGBudNJ.png" className='img' />
+
                 <img src="https://i.imgur.com/tbPcO9P.png" className='img' />
 
               </Carousel>

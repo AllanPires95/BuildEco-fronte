@@ -45,14 +45,14 @@ function Navbar() {
                     <Typography variant="h6" component="div" sx={{ flexGrow: 1 }}>
                         <Link to="/produto" className='text-decorator-none'>
                             <Button className="cbt">Produtos</Button>
-                        </Link>
+                        </Link>                    
                     </Typography>
                     <Typography variant="h6" component="div" sx={{ flexGrow: 1 }}>
-                        <Link to="/formulariocategoria" className="text-decorator-none">
+                        <Link to="/sobrenos" className="text-decorator-none">
                             <Button className="cbt">sobre nós</Button>
                         </Link>
                     </Typography>
-                
+
                     <Link to="/Login" className="text-decorator-none">
                         <Box mx={1} className="cursor" onClick={goLogout}>
                             <Typography variant="h6" color="inherit">

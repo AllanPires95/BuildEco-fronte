@@ -35,7 +35,7 @@ function Footer() {
     }
 
     var footercomponent
-    if (token != "") {
+    if (token != "/") {
         footercomponent = <Grid container spacing={3} justifyContent="center" alignItems="flex-start">
             <Grid item md={3}>
                 <img className="img" src="https://images-ext-2.discordapp.net/external/8KZpnIEv3ngXOnG9soQQOmaPK6R7-txtzeBT0jMsDjk/https/i.imgur.com/qcgk1tC.png?width=425&height=427" alt="Logotipo Build Eco" />

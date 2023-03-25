@@ -62,7 +62,7 @@ function Modalproduto() {
             <Button
                 variant="outlined"
                 className="btnModal"
-                onClick={handleOpen}>Nova produto</Button>
+                onClick={handleOpen}>Novo produto</Button>
             <Modal
                 open={open}
                 onClose={handleClose}
