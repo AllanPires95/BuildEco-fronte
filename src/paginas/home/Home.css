@@ -1,18 +1,10 @@
-.fundo{
+/*.fundo{
   background-color: #86af37;
   margin-bottom: 300px;
 }
-
-.t1{
-  text-align: center !important;
-  color: #0f2a00;
-
-}
-
 .txtcolor{
   margin-top: "700px";
   margin-bottom:"300px";
-
 }
 .txt{
   text-align: center !important;
@@ -21,7 +13,7 @@
   color: rgb(255, 255, 255) !important;
   size: 15;  
   margin-bottom: auto;
-} 
+} */
 
 .imgbanner{
   width: 100%;
@@ -33,11 +25,6 @@
   height: 330px;
 }
 
-
-/*.txt3{
-  background-color: blue !important;
-}*/
-
 .cx{
   justify-Content: "center" !important; 
   align-Content:'center' !important;
@@ -46,4 +33,29 @@
   width: 550px;
   height: 400px; 
   
+}
+
+.cardprod{
+margin-right: 100px;
+height: 380px;
+width: 250px;
+}
+
+.txtprod{
+  text-align: center !important;
+}
+
+.btnprod{
+  background-color: #0f2a00 !important;
+  margin-left: 20px !important;
+  text-align: center;
+} 
+
+.grid2{
+  align-items: flex-end;
+}
+
+.t1{
+  text-align: center !important;
+  color: #0f2a00;
 }

@@ -1,105 +1,210 @@
-import React from 'react';
-import './Home.css';
-import { Box, Card, CardActions, CardContent } from '@mui/material';
-import { Grid, Typography, Button } from '@material-ui/core';
-import { Carousel } from '@trendyol-js/react-carousel';
-import { Link } from 'react-router-dom';
-import { post } from '../../services/Service';
+import React from "react";
+import "./Home.css";
+import { Box, Card, CardActions, CardContent } from "@mui/material";
+import { Grid, Typography, Button, TextField } from "@material-ui/core";
+import { Carousel } from "@trendyol-js/react-carousel";
+import { Link } from "react-router-dom";
+import { post } from "../../services/Service";
 
 function Home() {
   return (
-
     <div>
       <Grid container>
-        <img className="imgbanner" src="https://i.imgur.com/N4CTh7j.png" alt="banner" />
+        <img
+          className="imgbanner"
+          src="https://i.imgur.com/N4CTh7j.png"
+          alt="banner"
+        />
       </Grid>
 
-      <Grid className='txt3' xs={12}>
+      <Grid className="txt3" xs={12}>
         <Box paddingTop="0px" height="300px">
-          <Typography className="t1" >
-
+          <Typography className="t1">
             <h1>Confira os produtos mais procurados </h1>
 
-            <Box >
+            <Box>
               <Carousel show={4} slide={1} className="txt2">
-                
-                <img src="https://i.imgur.com/hgWSsu5.png" className='img' />
-                
-                <img src="https://i.imgur.com/ZWBgnhH.png" className='img' />
+                <img src="https://i.imgur.com/hgWSsu5.png" className="img" />
 
-                <img src="https://i.imgur.com/d2KpdYI.png" className='img' />
+                <img src="https://i.imgur.com/ZWBgnhH.png" className="img" />
 
-                <img src="https://i.imgur.com/sGBudNJ.png" className='img' />
+                <img src="https://i.imgur.com/d2KpdYI.png" className="img" />
 
-                <img src="https://i.imgur.com/hgWSsu5.png" className='img' />
-                
-                <img src="https://i.imgur.com/ZWBgnhH.png" className='img' />
+                <img src="https://i.imgur.com/sGBudNJ.png" className="img" />
 
-                <img src="https://i.imgur.com/d2KpdYI.png" className='img' />
+                <img src="https://i.imgur.com/hgWSsu5.png" className="img" />
 
-                <img src="https://i.imgur.com/sGBudNJ.png" className='img' />
+                <img src="https://i.imgur.com/ZWBgnhH.png" className="img" />
 
+                <img src="https://i.imgur.com/d2KpdYI.png" className="img" />
+
+                <img src="https://i.imgur.com/sGBudNJ.png" className="img" />
               </Carousel>
             </Box>
-
           </Typography>
         </Box>
       </Grid>
 
-      <Grid container justifyContent="center" alignContent='center'>
-        <Grid xs={5} >
-          <Box className='img2'>
-            <Link to= '/produto '>
-            <img src="https://cdn.discordapp.com/attachments/1064895288118087700/1088543329278500974/card.png" alt="sobre o eco" className='img2' />
+      <Grid container justifyContent="center" alignContent="center">
+        <Grid>
+          <Box className="img2">
+            <Link to="/produto ">
+              <img
+                src="https://i.imgur.com/IBC9ZyS.png"
+                alt="card1"
+                className="img2"/>
             </Link>
           </Box>
         </Grid>
 
-        <Grid xs={5}>
-        <Box m={10}>
-            <Card variant="elevation" className="cardprod">
-            <CardContent>
-                
-            </CardContent>
+        <Grid xs={3}>
+          <Box m={1}>
+            <Card className="cardprod" variant="elevation">
+              <CardContent>
+                <h1 className="txtprod">Tijolo Eco</h1>
+                <img
+                  src="https://i.imgur.com/vNE92qo.jpg"
+                  alt="tijolo"
+                  className="img"
+                />
+                <h2 className="txtprod">R$1,50</h2>
+              </CardContent>
 
-
-            <CardActions>
-                <Box display="flex" justifyContent="center" width="100px" height="150px">
-                <img className="img" alt='' />
-                <Link to={`/produto`} className="text-decorator-none" >
-                    <Box mx={1}>
-                    <Button className="botao" variant="contained" size='small'  style={{color:"white"}}>
+              <CardActions>
+                <Box display="flex" justifyContent="center">
+                  <Link to={`/produto`} className="text-decorator-none">
+                    <Box marginLeft={9} marginBottom={4} textAlign="center">
+                      <Button
+                        className="botao"
+                        variant="contained"
+                        size="small"
+                        style={{ color: "white" }}
+                      >
                         COMPRAR
-                    </Button>
+                      </Button>
                     </Box>
-                </Link>
-              </Box>
-            </CardActions>
+                  </Link>
+                </Box>
+              </CardActions>
             </Card>
-        </Box>
+          </Box>
+        </Grid>
+
+        <Grid xs={3} alignItems="center">
+          <Box m={1}>
+            <Card className="cardprod" variant="elevation">
+              <CardContent>
+                <h1 className="txtprod">Tijolo Can</h1>
+                <img
+                  src="https://i.imgur.com/nEYb5oc.png"
+                  alt="tijolo"
+                  className="img"
+                />
+                <h2 className="txtprod">R$1,75</h2>
+              </CardContent>
+
+              <CardActions>
+                <Box>
+                  <Link to={`/produto`} className="text-decorator-none">
+                    <Box marginLeft={7} marginBottom={4} textAlign="center">
+                      <Button
+                        variant="contained"
+                        className="btnprod"
+                        size="small"
+                        style={{ color: "white" }}
+                      >
+                        COMPRAR
+                      </Button>
+                    </Box>
+                  </Link>
+                </Box>
+              </CardActions>
+            </Card>
+          </Box>
         </Grid>
       </Grid>
 
       <Grid container>
         <Box>
-          <img className="imgbanner" src="https://i.imgur.com/MPxG30p.jpg" alt="banner" />
+          <img
+            className="imgbanner"
+            src="https://i.imgur.com/MPxG30p.jpg"
+            alt="banner informativo"
+          />
         </Box>
       </Grid>
 
-      <Grid container xs={12} justifyContent='center' >
-        <Grid xs={5} className="txt"  >
-          vamos morre
-        </Grid>
-        <Grid xs={5} justifyContent="flex-end" >
-          <Box className='txt' style={{ backgroundColor: "#0f2a00" }} width="500px" height="400px">
-            <Typography >
-              <Box>
-                <h1>Agregados</h1>
-                <h2>reciclados</h2>
-              </Box>
-            </Typography>
+      <Grid container justifyContent="center" alignContent="center">
+        <Grid xs={3}>
+          <Box m={1}>
+            <Card className="cardprod" variant="elevation">
+              <CardContent>
+                <h1 className="txtprod">Telha Rec</h1>
+                <img
+                  src="https://i.imgur.com/vXBNDR0.jpg"
+                  alt="tijolo"
+                  className="img"
+                />
+                <h2 className="txtprod">R$1,50</h2>
+              </CardContent>
+
+              <CardActions>
+                <Box display="flex" justifyContent="center">
+                  <Link to={`/produto`} className="text-decorator-none">
+                    <Box marginLeft={9} marginBottom={4} textAlign="center">
+                      <Button
+                        className="botao"
+                        variant="contained"
+                        size="small"
+                        style={{ color: "white" }}>
+                        COMPRAR
+                      </Button>
+                    </Box>
+                  </Link>
+                </Box>
+              </CardActions>
+            </Card>
           </Box>
         </Grid>
+
+        <Grid xs={3}>
+          <Box m={1}>
+            <Card className="cardprod" variant="elevation">
+              <CardContent>
+                <h1 className="txtprod">Telha Eco</h1>
+                <img
+                  src="https://i.imgur.com/RhyISpp.jpg"
+                  alt="tijolo"
+                  className="img"
+                />
+                <h2 className="txtprod">R$1,50</h2>
+              </CardContent>
+
+              <CardActions>
+                <Box>
+                  <Link to={`/produto`} className="text-decorator-none">
+                    <Box marginLeft={6} marginBottom={4} textAlign="center">
+                      <Button
+                        variant="contained"
+                        className="btnprod"
+                        size="small"
+                        style={{ color: "white" }}>
+                        COMPRAR
+                      </Button>
+                    </Box>
+                  </Link>
+                </Box>
+              </CardActions>
+            </Card>
+          </Box>
+        </Grid>
+        
+          <Box className='img2'>
+            <Link to= '/produto '>
+            <img src="https://i.imgur.com/jXw48rm.png" alt="telhaeco1" className='img2' />
+            </Link>
+          </Box>
+        
       </Grid>
     </div>
   );
