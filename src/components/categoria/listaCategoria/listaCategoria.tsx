@@ -80,6 +80,13 @@ function ListaCategoria() {
                                         </Box>
                                     </Link>
                                 </Box>
+                                <Link to="/formularioCategoria" className="text-decorator-none">
+                                    <Box mx={1}>
+                                    <Button variant="contained" size='small' color="secondary">
+                                        Cadastro Categoria
+                                    </Button>
+                                    </Box>
+                                </Link>
                             </CardActions>
                         </Card>
                     </Box>
