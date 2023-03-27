@@ -52,8 +52,8 @@ return (
     <>
     {
         posts.map(post => (
-        <Box m={2} >
-            <Card variant="outlined">
+        <Box m={10}>
+            <Card variant="elevation" className="cardprod">
             <CardContent>
                 <Typography color="textSecondary" gutterBottom>
                 produto
@@ -64,10 +64,13 @@ return (
                 <Typography variant="body2" component="p">
                 {post.preco}
                 </Typography>
+                <img className="img" src={post.marca} alt='' />
                 <Typography variant="body2" component="p">
                 {post.categoria?.descricao}
                 </Typography>
             </CardContent>
+
+
             <CardActions>
                 <Box display="flex" justifyContent="center" mb={1.5}>
                 <Link to={`/formularioproduto/${post.id}`} className="text-decorator-none" >

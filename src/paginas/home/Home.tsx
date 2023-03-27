@@ -1,9 +1,10 @@
 import React from 'react';
 import './Home.css';
-import { Box } from '@mui/material';
+import { Box, Card, CardActions, CardContent } from '@mui/material';
 import { Grid, Typography, Button } from '@material-ui/core';
 import { Carousel } from '@trendyol-js/react-carousel';
 import { Link } from 'react-router-dom';
+import { post } from '../../services/Service';
 
 function Home() {
   return (
@@ -49,14 +50,33 @@ function Home() {
         <Grid xs={5} >
           <Box className='img2'>
             <Link to= '/produto '>
-            <img src="https://i.imgur.com/QausXvO.png" alt="sobre o eco" className='img2' />
+            <img src="https://cdn.discordapp.com/attachments/1064895288118087700/1088543329278500974/card.png" alt="sobre o eco" className='img2' />
             </Link>
           </Box>
         </Grid>
+
         <Grid xs={5}>
-          <Box className='txt'  width="500px" height="400px" >
-          <img src="https://i.imgur.com/vReoSpO.png" alt="outro coisa" width= "650" height="400" />
-          </Box>
+        <Box m={10}>
+            <Card variant="elevation" className="cardprod">
+            <CardContent>
+                
+            </CardContent>
+
+
+            <CardActions>
+                <Box display="flex" justifyContent="center" width="100px" height="150px">
+                <img className="img" alt='' />
+                <Link to={`/produto`} className="text-decorator-none" >
+                    <Box mx={1}>
+                    <Button className="botao" variant="contained" size='small'  style={{color:"white"}}>
+                        COMPRAR
+                    </Button>
+                    </Box>
+                </Link>
+              </Box>
+            </CardActions>
+            </Card>
+        </Box>
         </Grid>
       </Grid>
 
