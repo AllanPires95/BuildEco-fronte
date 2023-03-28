@@ -45,7 +45,7 @@ function Navbar() {
                     <Typography variant="h6" component="div" sx={{ flexGrow: 1 }}>
                         <Link to="/produto" className='text-decorator-none'>
                             <Button className="cbt">Produtos</Button>
-                        </Link>                    
+                        </Link>                                   
                     </Typography>
                     <Typography variant="h6" component="div" sx={{ flexGrow: 1 }}>
                         <Link to="/sobrenos" className="text-decorator-none">
