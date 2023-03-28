@@ -96,7 +96,7 @@ function Home() {
               <CardContent>
                 <h1 className="txtprod">Tijolo Can</h1>
                 <img
-                  src="https://i.imgur.com/nEYb5oc.png"
+                  src="https://i.imgur.com/XU44l4e.png"
                   alt="tijolo"
                   className="img"
                 />
