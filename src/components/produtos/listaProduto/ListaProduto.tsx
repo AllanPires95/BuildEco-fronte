@@ -74,13 +74,6 @@ function ListaProduto() {
 
                             <CardActions>
                                 <Box display="flex" justifyContent="center" mb={1.5}>
-                                <Link to="/formularioProduto" className="text-decorator-none">
-                                <Box mx={1}>
-                                    <Button variant="contained" size='small' color="secondary">
-                                        Cadastro Produto
-                                    </Button>
-                                </Box>
-                            </Link>      
                                     <Link to={`/formularioproduto/${post.id}`} className="text-decorator-none" >
                                         <Box mx={1}>
                                             <Button className="btnAtualizar" variant="contained" size='small'>
@@ -93,6 +86,13 @@ function ListaProduto() {
                                             <Button variant="contained" size='small' color="secondary">
                                                 deletar
                                             </Button>
+                                            <Link to={'/formularioProduto'} className="text-decorator-none">
+                                                <Box mx={1}>
+                                                    <Button className='' variant="contained" size='small'>
+                                                        Cadastro Produtos
+                                                    </Button>
+                                                </Box>
+                                            </Link>
                                         </Box>
                                     </Link>
                                 </Box>
