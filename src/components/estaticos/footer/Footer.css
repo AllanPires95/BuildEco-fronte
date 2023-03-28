@@ -11,3 +11,7 @@
     display: flex;
     align-items: center;
 }
+
+.footerContainer{
+    width: 1300px!important;
+}

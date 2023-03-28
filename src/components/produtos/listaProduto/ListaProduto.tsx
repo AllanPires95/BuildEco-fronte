@@ -72,7 +72,7 @@ function ListaProduto() {
 
 
                             <CardActions>
-                                <Box display="flex" justifyContent="center" mb={1.5}>
+                                <Box display="flex" justifyContent="center" mb={1.5} alignItems='center' >
                                     <Link to={`/formularioproduto/${post.id}`} className="text-decorator-none" >
                                         <Box mx={1}>
                                             <Button className="btnAtualizar" variant="contained" size='small'>
