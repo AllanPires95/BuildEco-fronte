@@ -145,7 +145,7 @@ function Home() {
                   alt="tijolo"
                   className="img"
                 />
-                <h2 className="txtprod">R$1,50</h2>
+                <h2 className="txtprod">R$80,00</h2>
               </CardContent>
 
               <CardActions>
@@ -173,11 +173,11 @@ function Home() {
               <CardContent>
                 <h1 className="txtprod">Telha Eco</h1>
                 <img
-                  src="https://i.imgur.com/RhyISpp.jpg"
+                  src="https://i.imgur.com/j8unlrI.jpg"
                   alt="tijolo"
                   className="img"
                 />
-                <h2 className="txtprod">R$1,50</h2>
+                <h2 className="txtprod">R$95,00</h2>
               </CardContent>
 
               <CardActions>
