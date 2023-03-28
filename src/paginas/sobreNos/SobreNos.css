@@ -1,6 +1,10 @@
-.img{
+.foto{
     border-radius: 30px !important;
-
+    width: 350px;
+    height: 400px;
+    display: flex;
+    align-items: center;
+    
     
 }
 
@@ -16,8 +20,8 @@
 .flexContainer{
     display: flex;
     justify-content: flex-end;
-  
+   
 }
 .body{
-   
+   width: 1200px;
 }
