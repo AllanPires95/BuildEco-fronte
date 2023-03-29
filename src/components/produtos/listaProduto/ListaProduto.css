@@ -1,8 +1,21 @@
-.text-decorator-none{
+/* .text-decorator-none{
     background-color: #dbebe1 !important;
     color: #13c04f!important;
-}
+} */
 
 .cardprod{
    
+}
+
+.cadastroProd {
+
+
+    position: fixed;
+    bottom: 1rem;
+    right: 1rem;
+
+}
+
+.cadastroProdIcon {
+    border-radius: 50% !important
 }
