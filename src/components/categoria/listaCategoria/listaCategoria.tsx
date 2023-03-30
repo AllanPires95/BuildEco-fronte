@@ -1,6 +1,6 @@
-import React, { useState, useEffect } from 'react'
+import React, { useState, useEffect, ChangeEvent } from 'react'
 import { Link } from 'react-router-dom'
-import { Card, CardActions, CardContent, Button, Typography, Fab } from '@material-ui/core';
+import { Card, CardActions, CardContent, Button, Typography, Fab, TextField } from '@material-ui/core';
 import { Box } from '@mui/material';
 import './listaCategoria.css';
 import { useNavigate } from 'react-router-dom';
@@ -13,10 +13,16 @@ import AddIcon from '@mui/icons-material/Add'
 
 function ListaCategoria() {
     const [categoria, setCategoria] = useState<Categoria[]>([])
-    let navigate = useNavigate();
     const token = useSelector<TokenState, TokenState["tokens"]>(
         (state) => state.tokens
     );
+    
+    const userId = useSelector<TokenState, TokenState["id"]>(
+        (state) => state.id
+    );
+    let navigate = useNavigate();
+      
+    
 
     useEffect(() => {
         if (token == '') {
@@ -48,8 +54,37 @@ function ListaCategoria() {
         getcategoria()
     }, [categoria.length])
 
+    
+    const [pesquisa, setPesquisa] = useState("");
+
+    let vazio: boolean = false;
+
+    const filteredList = categoria.filter((elements) => {
+        if (pesquisa === "") {
+            return elements;
+        } else {
+            console.log(elements.nome.toLowerCase().includes(pesquisa));
+            if (elements === null) {
+                return (vazio = true);
+            }
+            return elements.nome.toLowerCase().includes(pesquisa);
+        }
+    });
+
     return (
         <>
+        <TextField 
+                type="text"
+                className="Search"
+                label= "Pesquisa"
+                name="pesquisa"
+                id="pesquisa"
+                variant="outlined"
+                margin="normal"
+                onChange={(e: ChangeEvent<HTMLInputElement>) =>
+                    setPesquisa(e.currentTarget.value)
+                }
+            />
           <Link to={'/formularioCategoria'} className="text-decorator-none cadastroProd ">
                 {/* <Box mx={1} display={'flex'} justifyContent='center'>
                     <Button className='' variant="contained" size='small'>
@@ -70,6 +105,7 @@ function ListaCategoria() {
                                     {categoria.descricao}
                                 </Typography>
                             </CardContent>
+                            {+userId === 11 ? (
                             <CardActions>
                                 <Box display="flex" justifyContent="center" mb={1.5} >
 
@@ -88,7 +124,8 @@ function ListaCategoria() {
                                         </Box>
                                     </Link>
                                 </Box>
-                            </CardActions>
+                            </CardActions> 
+                            ) : <></>}
                         </Card>
                     </Box>
                 ))

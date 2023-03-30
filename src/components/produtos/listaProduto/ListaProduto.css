@@ -19,3 +19,9 @@
 .cadastroProdIcon {
     border-radius: 50% !important
 }
+.Search {
+    width: 20% !important;
+    top: 30px !important;
+    margin-left: 37rem !important;
+    margin-top: 3rem !important;
+}

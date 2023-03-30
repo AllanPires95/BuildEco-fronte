@@ -1,6 +1,6 @@
-import React, { useState, useEffect } from 'react'
+import React, { useState, useEffect, ChangeEvent } from 'react'
 import { Link } from 'react-router-dom'
-import { Card, CardActions, CardContent, Button, Typography } from '@material-ui/core';
+import { Card, CardActions, CardContent, Button, Typography, TextField } from '@material-ui/core';
 import { Box } from '@mui/material';
 import Fab from '@mui/material/Fab'
 import { useNavigate } from 'react-router-dom'
@@ -14,7 +14,7 @@ import './ListaProduto.css'
 
 
 export function ListaProduto() {
-    const [posts, setPosts] = useState<Produto[]>([])
+    const [produtos, setPosts] = useState<Produto[]>([])
     const token = useSelector<TokenState, TokenState["tokens"]>(
         (state) => state.tokens
     );
@@ -52,10 +52,38 @@ export function ListaProduto() {
 
         getPost()
 
-    }, [posts.length])
+    }, [produtos.length])
+
+    const [pesquisa, setPesquisa] = useState("");
+
+    let vazio: boolean = false;
+
+    const filteredList = produtos.filter((elements) => {
+        if (pesquisa === "") {
+            return elements;
+        } else {
+            console.log(elements.nome.toLowerCase().includes(pesquisa));
+            if (elements === null) {
+                return (vazio = true);
+            }
+            return elements.nome.toLowerCase().includes(pesquisa);
+        }
+    });
 
     return (
         <>
+            <TextField
+                type="text"
+                className="Search"
+                label="Pesquisa"
+                name="pesquisa"
+                id="pesquisa"
+                variant="outlined"
+                margin="normal"
+                onChange={(e: ChangeEvent<HTMLInputElement>) =>
+                    setPesquisa(e.currentTarget.value)
+                }
+            />
             <Link to={'/formularioProduto'} className="text-decorator-none cadastroProd ">
                 {/* <Box mx={1} display={'flex'} justifyContent='center'>
                     <Button className='' variant="contained" size='small'>
@@ -66,7 +94,7 @@ export function ListaProduto() {
             </Link>
             <Box display={'flex'} flexWrap={'wrap'} gap={'1rem'}>
                 {
-                    posts.map(post => (
+                    produtos.map(post => (
                         <Box m={2}>
                             <Card variant="elevation" className="cardprod">
                                 <CardContent>
@@ -86,26 +114,26 @@ export function ListaProduto() {
                                 </CardContent>
                                 {+userId === 11 ? (
                                     <CardActions>
-                                    <Box display="flex" justifyContent="center" mb={1.5}>
-                                        <Link to={`/formularioproduto/${post.id}`} className="text-decorator-none" >
-                                            <Box mx={1}>
-                                                <Button className="btnAtualizar" variant="contained" color='primary' size='small'>
-                                                    atualizar
-                                                </Button>
-                                            </Box>
-                                        </Link>
-                                        <Link to={`/deletarproduto/${post.id}`} className="text-decorator-none">
-                                            <Box mx={1}>
-                                                <Button variant="contained" size='small' color="secondary">
-                                                    deletar
-                                                </Button>
-            
-                                            </Box>
-                                        </Link>
-                                    </Box>
-                                </CardActions>
+                                        <Box display="flex" justifyContent="center" mb={1.5}>
+                                            <Link to={`/formularioproduto/${post.id}`} className="text-decorator-none" >
+                                                <Box mx={1}>
+                                                    <Button className="btnAtualizar" variant="contained" color='primary' size='small'>
+                                                        atualizar
+                                                    </Button>
+                                                </Box>
+                                            </Link>
+                                            <Link to={`/deletarproduto/${post.id}`} className="text-decorator-none">
+                                                <Box mx={1}>
+                                                    <Button variant="contained" size='small' color="secondary">
+                                                        deletar
+                                                    </Button>
+
+                                                </Box>
+                                            </Link>
+                                        </Box>
+                                    </CardActions>
                                 ) : <></>}
-            
+
                             </Card>
                         </Box>
                     ))

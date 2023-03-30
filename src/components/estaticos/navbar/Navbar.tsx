@@ -54,7 +54,7 @@ function Navbar() {
                     </Typography>
                     
                     <Link to="/steps">
-                        <img src="https://imgur.com/gv097ZI" width="50px"></img>
+                        <img src="https://imageup.me/t30.png" width="50px"></img>
                     </Link>
 
                     <Link to="/Login" className="text-decorator-none">
