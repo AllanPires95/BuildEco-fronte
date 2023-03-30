@@ -52,6 +52,10 @@ function Navbar() {
                             <Button className="cbt">sobre nós</Button>
                         </Link>
                     </Typography>
+                    
+                    <Link to="/steps">
+                        <img src="https://imgur.com/gv097ZI" width="50px"></img>
+                    </Link>
 
                     <Link to="/Login" className="text-decorator-none">
                         <Box mx={1} className="cursor" onClick={goLogout}>

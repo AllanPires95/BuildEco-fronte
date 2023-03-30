@@ -13,7 +13,7 @@ import AddIcon from '@mui/icons-material/Add'
 import './ListaProduto.css'
 
 
-function ListaProduto() {
+export function ListaProduto() {
     const [posts, setPosts] = useState<Produto[]>([])
     const token = useSelector<TokenState, TokenState["tokens"]>(
         (state) => state.tokens
@@ -84,7 +84,7 @@ function ListaProduto() {
                                         {post.categoria?.descricao}
                                     </Typography>
                                 </CardContent>
-                                {+userId === 3 ? (
+                                {+userId === 11 ? (
                                     <CardActions>
                                     <Box display="flex" justifyContent="center" mb={1.5}>
                                         <Link to={`/formularioproduto/${post.id}`} className="text-decorator-none" >

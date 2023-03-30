@@ -17,6 +17,7 @@ import ListaCategoria from './components/categoria/listaCategoria/listaCategoria
 import store from './store/Store';
 import 'react-toastify/dist/ReactToastify.css';
 import SobreNos from './paginas/sobreNos/SobreNos';
+import {Steps} from './components/steps/'
 
 function App() {
   return (
@@ -27,6 +28,8 @@ function App() {
 
         <div style={{ minHeight: '100vh' }}>
           <Routes>
+
+          <Route path="/steps" element={<Steps/>} />
 
           <Route path="/sobrenos" element={<SobreNos/>} />
 
