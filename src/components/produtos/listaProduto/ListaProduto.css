@@ -20,8 +20,14 @@
     border-radius: 50% !important
 }
 .Search {
-    width: 20% !important;
-    top: 30px !important;
+    width: 15% !important;
+    top: 0 !important;
     margin-left: 37rem !important;
     margin-top: 3rem !important;
+}
+.cmp{
+   width: 15% !important;
+   margin-top: 4rem!important;
+   margin-left: 0 auto !important;
+   margin-right: 20rem !important;
 }

@@ -54,6 +54,9 @@ export function ListaProduto() {
 
     }, [produtos.length])
 
+    const handleAddToCart = () => { }
+    
+
     const [pesquisa, setPesquisa] = useState("");
 
     let vazio: boolean = false;
@@ -92,6 +95,7 @@ export function ListaProduto() {
                 </Box> */}
                 <Fab color='primary' className='cadastroProdIcon'><AddIcon /></Fab>
             </Link>
+                      
             <Box display={'flex'} flexWrap={'wrap'} gap={'1rem'}>
                 {
                     produtos.map(post => (
@@ -112,6 +116,7 @@ export function ListaProduto() {
                                         {post.categoria?.descricao}
                                     </Typography>
                                 </CardContent>
+                                
                                 {+userId === 11 ? (
                                     <CardActions>
                                         <Box display="flex" justifyContent="center" mb={1.5}>
@@ -127,10 +132,17 @@ export function ListaProduto() {
                                                     <Button variant="contained" size='small' color="secondary">
                                                         deletar
                                                     </Button>
-
                                                 </Box>
                                             </Link>
                                         </Box>
+                                        <Link to={'/steps'} className="text-decorator-none">
+                                        <Box mx={1} display="flex" justifyContent="center" mb={1.5}>
+                                            <Button onClick={handleAddToCart} variant='contained' size='small' color='secondary'>
+                                                Comprar
+                                            </Button>
+                                        </Box>
+                                        </Link>
+
                                     </CardActions>
                                 ) : <></>}
 

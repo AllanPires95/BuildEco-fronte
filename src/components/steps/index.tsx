@@ -11,6 +11,9 @@ import { ListaProduto } from '../produtos/listaProduto/ListaProduto'
 import { Delivery } from '../Delivery/delivery';
 import { Payment } from '../Payment/pagamentos';
 import { toast } from 'react-toastify';
+import { Link } from 'react-router-dom';
+import Fab from '@material-ui/core/Fab';
+import AddIcon from '@mui/icons-material/Add'
 
 export function Steps() {
     const [currentStep, setCurrentStep] = useState(0);
@@ -37,7 +40,7 @@ export function Steps() {
                 </Step>
             </Stepper>
 
-            {currentStep === 0 && <ListaProduto />}
+            {currentStep === 0 && ''}
             {currentStep === 1 && <Delivery />}
             {currentStep === 2 && <Payment />}
 
@@ -53,12 +56,20 @@ export function Steps() {
                 theme: "light",
             }): (
             <>
-                <Button onClick={back}>Voltar</Button>
-                <Button onClick={next}>Próximo</Button>
+               <Button onClick={back}>Voltar</Button>
+               <Button onClick={next}>Próximo</Button>
+               <Link to={'/produto'} className="text-decorator-none cadastroProd ">
+                {/* <Box mx={1} display={'flex'} justifyContent='center'>
+                    <Button className='' variant="contained" size='small'>
+                        Cadastro Produtos
+                    </Button>
+                </Box> */}
+                <Fab color='primary'><AddIcon /></Fab>
+            </Link>
+                     
+                
             </>
             )}
-
-
 
         </Box>
     )
