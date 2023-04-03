@@ -109,7 +109,11 @@ export function ListaProduto() {
                                         {post.nome}
                                     </Typography>
                                     <Typography variant="body2" component="p">
-                                        {post.preco}
+                                        {Intl.NumberFormat('pt-br', {
+                                            style: 'currency',
+                                            currency: 'BRL'
+                                        }).format(post.preco)}
+                                        
                                     </Typography>
                                     <img className="img" src={post.marca} alt='' />
                                     <Typography variant="body2" component="p">

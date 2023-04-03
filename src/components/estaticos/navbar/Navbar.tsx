@@ -6,6 +6,8 @@ import { useDispatch, useSelector } from "react-redux";
 import { toast } from 'react-toastify';
 import { TokenState } from "../../../store/tokens/TokensReducer";
 import { addToken } from "../../../store/tokens/Actions";
+import ShoppingCartIcon from '@mui/icons-material/ShoppingCart';
+import LogoutIcon from '@mui/icons-material/Logout';
 
 function Navbar() {
     const token = useSelector<TokenState, TokenState["tokens"]>(
@@ -53,17 +55,19 @@ function Navbar() {
                         </Link>
                     </Typography>
                     
-                    <Link to="/steps">
-                        <img src="https://imageup.me/t30.png" width="50px"></img>
+                    <Link to="/steps" className="text-decorator-none">
+                       <Typography variant="h6" color="inherit">
+                       <Box mx={1} className="cursor" onClick={goLogout}>
+                                <Button className="cbt">Logout</Button>
+                                </Box>
+                            </Typography>
+
                     </Link>
 
                     <Link to="/Login" className="text-decorator-none">
-                        <Box mx={1} className="cursor" onClick={goLogout}>
-                            <Typography variant="h6" color="inherit">
-                                <Button className="cbt">Logout</Button>
-                            </Typography>
-
-                        </Box>
+                        <Box className="shopCar" >
+                        <ShoppingCartIcon style={{color:"white"}} />  
+                         </Box>
                     </Link>
                 </Toolbar>
             </AppBar>

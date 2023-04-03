@@ -36,15 +36,15 @@ function Footer() {
 
     var footercomponent
     if (token != "/") {
-        footercomponent = <Grid className='footerContainer' container spacing={3} justifyContent="center" alignItems="flex-start" >
+        footercomponent = <Grid className='footerContainer' container  justifyContent="center" alignItems="center" >
             <Grid item md={3} >
                 <img className="img" src="https://images-ext-2.discordapp.net/external/8KZpnIEv3ngXOnG9soQQOmaPK6R7-txtzeBT0jMsDjk/https/i.imgur.com/qcgk1tC.png?width=425&height=427" alt="Logotipo Build Eco" />
             </Grid>
-            <Grid item md={6}>
+            <Grid item xs={10} md={6}>
                 <Typography variant="h5" align="center" gutterBottom>Sobre nós</Typography>
                 <Typography variant="body1" align="justify">Somos um e-commerce de produtos biodegradáveis para área de construção civil e temos como objetivo evitar e diminuir o impacto da construção civil no meio ambiente essa é uma das maiores motivações.</Typography>
             </Grid>
-            <Grid item container md={3} className="icones">
+            <Grid item container md={3} className='icones'>
                 <Typography variant="h5" gutterBottom className='texto'>Siga-nos</Typography>
                 <Grid>
                     <IconButton  href="https://www.facebook.com/generationbrasil/" target="_blank">

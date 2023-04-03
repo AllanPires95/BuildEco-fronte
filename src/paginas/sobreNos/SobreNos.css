@@ -1,27 +1,48 @@
-.foto{
-    border-radius: 30px !important;
-    width: 350px;
-    height: 400px;
+.flexContainer{
     display: flex;
-    align-items: center;
-    
-    
+    justify-content: space-between;
+    margin: 1rem 5rem;
 }
 
 .Ze{
-
     width: 100px;
-    height: 100px;
-    display: flex;
-    justify-content: flex-end;
-    border-radius: 20px;
 }
 
-.flexContainer{
+.cards {
     display: flex;
-    justify-content: flex-end;
-   
+    flex-direction: column;
+    width: min(1120px, 75vw);
+    margin: 0 auto;
+    gap: 2rem;
 }
-.body{
-   width: 1200px;
+
+.foto{
+    border-radius: 30px;
+    width: 350px;
+    height: 400px;
+}
+
+.cardPerson {
+    display: flex;
+    gap: 1rem;
+    align-items: center;
+}
+
+.cardPersonInvert {
+    display: flex;
+    flex-direction: row-reverse;
+    gap: 1rem;
+    align-items: center;
+}
+
+@media(max-width: 1000px) {
+    .cardPerson, .cardPersonInvert {
+        flex-direction: column;
+    }
+}
+
+.textPerson {
+    text-align: justify;
+    letter-spacing: 1px;
+    font-family: 'Roboto', sans-serif;
 }
