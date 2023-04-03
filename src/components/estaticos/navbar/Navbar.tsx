@@ -47,27 +47,27 @@ function Navbar() {
                     <Typography variant="h6" component="div" sx={{ flexGrow: 1 }}>
                         <Link to="/produto" className='text-decorator-none'>
                             <Button className="cbt">Produtos</Button>
-                        </Link>                                   
+                        </Link>
                     </Typography>
                     <Typography variant="h6" component="div" sx={{ flexGrow: 1 }}>
                         <Link to="/sobrenos" className="text-decorator-none">
                             <Button className="cbt">sobre nós</Button>
                         </Link>
                     </Typography>
-                    
-                    <Link to="/steps" className="text-decorator-none">
-                       <Typography variant="h6" color="inherit">
-                       <Box mx={1} className="cursor" onClick={goLogout}>
+
+                    <Link to="/login" className="text-decorator-none">
+                        <Typography variant="h6" color="inherit">
+                            <Box mx={1} className="cursor" onClick={goLogout}>
                                 <Button className="cbt">Logout</Button>
-                                </Box>
-                            </Typography>
+                            </Box>
+                        </Typography>
 
                     </Link>
 
-                    <Link to="/Login" className="text-decorator-none">
+                    <Link to="/steps" className="text-decorator-none">
                         <Box className="shopCar" >
-                        <ShoppingCartIcon style={{color:"white"}} />  
-                         </Box>
+                            <ShoppingCartIcon style={{ color: "white" }} />
+                        </Box>
                     </Link>
                 </Toolbar>
             </AppBar>
