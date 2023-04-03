@@ -95,7 +95,7 @@ export function ListaProduto() {
                 </Box> */}
                 <Fab color='primary' className='cadastroProdIcon'><AddIcon /></Fab>
             </Link>
-                      
+            
             <Box display={'flex'} flexWrap={'wrap'} gap={'1rem'}>
                 {
                     produtos.map(post => (
@@ -122,22 +122,22 @@ export function ListaProduto() {
                                         <Box display="flex" justifyContent="center" mb={1.5}>
                                             <Link to={`/formularioproduto/${post.id}`} className="text-decorator-none" >
                                                 <Box mx={1}>
-                                                    <Button className="btnAtualizar" variant="contained" color='primary' size='small'>
+                                                    <Button className="botao" variant="contained" color='primary' size='small'>
                                                         atualizar
                                                     </Button>
                                                 </Box>
                                             </Link>
                                             <Link to={`/deletarproduto/${post.id}`} className="text-decorator-none">
                                                 <Box mx={1}>
-                                                    <Button variant="contained" size='small' color="secondary">
+                                                    <Button className='botao' variant="contained" size='small' color="secondary">
                                                         deletar
                                                     </Button>
                                                 </Box>
                                             </Link>
                                         </Box>
                                         <Link to={'/steps'} className="text-decorator-none">
-                                        <Box mx={1} display="flex" justifyContent="center" mb={1.5}>
-                                            <Button onClick={handleAddToCart} variant='contained' size='small' color='secondary'>
+                                        <Box mx={0} display="flex" justifyContent="center" mb={1.5}>
+                                        <Button className='botao' onClick={handleAddToCart} variant='contained' size='small' color='secondary'>
                                                 Comprar
                                             </Button>
                                         </Box>

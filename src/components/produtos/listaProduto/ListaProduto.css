@@ -4,15 +4,19 @@
 } */
 
 .cardprod{
-   
+    margin-right: 65px;
+    height: 350px;
+    width: auto;
+    
+    
 }
 
 .cadastroProd {
-
-
     position: fixed;
     bottom: 1rem;
     right: 1rem;
+    width: '100px';
+    height: '100px';
 
 }
 
@@ -29,5 +33,16 @@
    width: 15% !important;
    margin-top: 4rem!important;
    margin-left: 0 auto !important;
-   margin-right: 20rem !important;
+   margin-right: 20px !important;
+}
+
+.botao{
+     
+     background-Color: '#0f2a00 ';
+     padding: '10px 20px';
+     border-Radius: '5px';
+     border: 'none';
+     
+     
+
 }
